@@ -1,7 +1,6 @@
 package com.devinhouse.vilacate.model.entity;
 
-import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class People {
@@ -9,24 +8,24 @@ public class People {
     private Long id;
     private String name;
     private String surname;
-    private Date birthdate;
-    private BigDecimal renda;
+    private LocalDate birthdate;
+    private Double rent;
     private String cpf;
     private String email;
-    private String senha;
+    private String password;
 
     public People() {
     }
 
-    public People(Long id, String name, String surname, Date birthdate, BigDecimal renda, String cpf, String email, String senha) {
+    public People(Long id, String name, String surname, LocalDate birthdate, Double rent, String cpf, String email, String password) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.birthdate = birthdate;
-        this.renda = renda;
+        this.rent = rent;
         this.cpf = cpf;
         this.email = email;
-        this.senha = senha;
+        this.password = password;
     }
 
     public Long getId() {
@@ -53,20 +52,20 @@ public class People {
         this.surname = surname;
     }
 
-    public Date getBirthdate() {
+    public LocalDate getBirthdate() {
         return birthdate;
     }
 
-    public void setBirthdate(Date birthdate) {
+    public void setBirthdate(LocalDate birthdate) {
         this.birthdate = birthdate;
     }
 
-    public BigDecimal getRenda() {
-        return renda;
+    public Double getRent() {
+        return rent;
     }
 
-    public void setRenda(BigDecimal renda) {
-        this.renda = renda;
+    public void setRent(Double rent) {
+        this.rent = rent;
     }
 
     public String getCpf() {
@@ -85,12 +84,12 @@ public class People {
         this.email = email;
     }
 
-    public String getSenha() {
-        return senha;
+    public String getPassword() {
+        return password;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
@@ -100,10 +99,10 @@ public class People {
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", birthdate=" + birthdate +
-                ", renda=" + renda +
+                ", rent=" + rent +
                 ", cpf='" + cpf + '\'' +
                 ", email='" + email + '\'' +
-                ", senha='" + senha + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 
