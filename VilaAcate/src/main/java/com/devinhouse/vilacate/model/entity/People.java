@@ -1,5 +1,9 @@
 package com.devinhouse.vilacate.model.entity;
 
+import com.devinhouse.vilacate.model.dto.PeopleDto;
+import org.springframework.data.annotation.Id;
+
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -8,16 +12,16 @@ public class People {
     private Long id;
     private String name;
     private String surname;
-    private LocalDate birthdate;
+    private Date birthdate;
     private Double rent;
     private String cpf;
     private String email;
-    private String password;
+    private String password = "*******";
 
     public People() {
     }
 
-    public People(Long id, String name, String surname, LocalDate birthdate, Double rent, String cpf, String email, String password) {
+    public People(Long id, String name, String surname, Date birthdate, Double rent, String cpf, String email, String password) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -26,6 +30,16 @@ public class People {
         this.cpf = cpf;
         this.email = email;
         this.password = password;
+    }
+
+    public People(Long id, String name, String surname, Date birthdate, Double rent, String cpf, String email) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.birthdate = birthdate;
+        this.rent = rent;
+        this.cpf = cpf;
+        this.email = email;
     }
 
     public Long getId() {
@@ -52,11 +66,11 @@ public class People {
         this.surname = surname;
     }
 
-    public LocalDate getBirthdate() {
+    public Date getBirthdate() {
         return birthdate;
     }
 
-    public void setBirthdate(LocalDate birthdate) {
+    public void setBirthdate(Date birthdate) {
         this.birthdate = birthdate;
     }
 
@@ -94,6 +108,7 @@ public class People {
 
     @Override
     public String toString() {
+
         return "people{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
@@ -106,6 +121,7 @@ public class People {
                 '}';
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -117,5 +133,9 @@ public class People {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    public PeopleDto generateDTO(){
+        return new PeopleDto(this.name,this.surname, this.birthdate, this.rent, this.cpf, this.email, this.password);
     }
 }
