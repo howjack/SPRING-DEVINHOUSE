@@ -1,4 +1,4 @@
-# Vilaacate System
+# Vila Acate System
 
 ### Pré-requisitos
 
