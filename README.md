@@ -21,6 +21,8 @@ $ git clone https://github.com/howjack/SPRING-DEVINHOUSE.git
 
 # Modele seu banco de dados com os conteudos do sql que estão no arquivo DB_VilaAcate na pasta Modelagem.
 
+# Modelagem de mensageria na pasta Modelagens
+
 # Execute a aplicação
 
 # Use esses endpoints abaixo para ler, criar ou deletar os habitantes do banco.
