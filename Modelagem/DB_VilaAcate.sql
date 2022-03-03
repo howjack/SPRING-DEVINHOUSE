@@ -1,9 +1,9 @@
 CREATE DATABASE vilaAcate;
 
-CREATE TABLE people(id SERIAL PRIMARY KEY, name varchar(60) NOT NULL, surname varchar(60), birth_date date NOT NULL, 
+CREATE TABLE people(id SERIAL PRIMARY KEY, name varchar(60) NOT NULL, surname varchar(60), birthdate date NOT NULL,
 	rent decimal(10,2) NOT NULL, cpf varchar(60) UNIQUE NOT NULL, email varchar(255) UNIQUE NOT NULL, password varchar(255) NOT NULL);
 
-INSERT INTO people(name,surname, birth_date, rent, cpf, email, password) 
+INSERT INTO people(name,surname, birthdate, rent, cpf, email, password)
 	VALUES  ('Phelipe', 'Fagundes', '1998/06/26', '800.08', '999.999.999-99' , 'phelipe44@gmail.com', 'Phelipe@99'),
 			('Pedro', 'Alves', '1999/02/12', '400.47', '888.888.888-88' , 'pedro47@gmail.com', 'Pedro!88');
 		
@@ -21,11 +21,11 @@ SELECT * FROM people; --LIST ALL THE PEOPLES--
 
 SELECT * FROM people WHERE id = 2; --GET BY ID--
 
-SELECT * FROM people WHERE EXTRACT(YEAR FROM birth_date) <= 1998; --GET BY AGE--
+SELECT * FROM people WHERE EXTRACT(YEAR FROM birthdate) <= 1998; --GET BY AGE--
 
 DELETE FROM people WHERE id = 2; --DELETE--
 
-INSERT INTO people(name,surname, birth_date, rent, cpf, email, password) --CREATE(POST)--
+INSERT INTO people(name,surname, birthdate, rent, cpf, email, password) --CREATE(POST)--
 	VALUES  (?, ?, ?, ?, ?, ?, ?);
 
 
