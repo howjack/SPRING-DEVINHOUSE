@@ -1,10 +1,13 @@
 package com.devinhouse.vilacate.model.dto;
 
+import com.devinhouse.vilacate.model.entity.People;
+
+import java.io.Serializable;
 import java.sql.Date;
 import java.util.List;
 import java.util.Objects;
 
-public class PeopleDto {
+public class PeopleDto implements Serializable {
 
     private String name;
     private String surname;
@@ -15,6 +18,16 @@ public class PeopleDto {
     private String password = "*******";
 
     public PeopleDto() {
+    }
+
+    public PeopleDto(People people) {
+        this.name = people.getName();
+        this.surname = people.getSurname();
+        this.birthdate = people.getBirthdate();
+        this.rent = people.getRent();
+        this.cpf = people.getCpf();
+        this.email = people.getEmail();
+        this.password = people.getPassword();
     }
 
     public PeopleDto(String name, String surname, Date birthdate, Double rent, String cpf, String email, String password) {
