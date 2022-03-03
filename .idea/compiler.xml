@@ -10,11 +10,13 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="VilaAcate" target="17" />
+      <module name="Consumer" target="11" />
+      <module name="VilaAcate" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Consumer" options="-parameters" />
       <module name="VilaAcate" options="-parameters" />
     </option>
   </component>
