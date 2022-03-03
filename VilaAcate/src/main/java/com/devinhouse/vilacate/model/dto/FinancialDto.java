@@ -2,8 +2,11 @@ package com.devinhouse.vilacate.model.dto;
 
 import org.springframework.beans.factory.annotation.Value;
 
-public class FinancialDto {
+import java.io.Serializable;
 
+public class FinancialDto implements Serializable {
+
+    private static final long serialVersionUID = 145561451L;
     private Double villageCost;
     private Double differenceSpent;
     private Double peoplesRent;
