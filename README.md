@@ -3,7 +3,8 @@
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina a seguintes ferramentas:
-[Eclipse Spring Tools](https://spring.io/tools), 
+[Eclipse Spring Tools](https://spring.io/tools),
+[RabbitMQ](https://www.rabbitmq.com/#getstarted),
 [Postgres](https://www.postgresql.org/download/).
 
 ### 🎲 Rodando a api (Back End)
